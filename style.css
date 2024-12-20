@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+button {
+    background-color: #007BFF;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prazangos {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+
+}
+
+.komanda1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.tasku-btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.irasai {
+    background-color: white;
+    border: 1px solid lightblue;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 50px;
+
+}

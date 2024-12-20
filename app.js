@@ -53,7 +53,11 @@ btnPrazangak1z1.addEventListener('click', () => {
     if (prazangosk1z1 < 5) {
         prazangosk1z1++;
         document.querySelector('[data-prazangos-k1z1]').innerText = prazangosk1z1;
-    } else { btnPrazangak1z1.disabled = true; }
+    } else {
+        btnPrazangak1z1.disabled = true;
+        btnPrazangak1z1.style.backgroundColor = 'red';
+        btnPrazangak1z1.style.cursor = 'not-allowed';
+    }
 })
 
 console.log(prazangos.komanda1.z1);

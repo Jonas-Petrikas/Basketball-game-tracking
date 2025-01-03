@@ -11,62 +11,68 @@
 
 <body>
     <div class="container">
-        <h1>Krepšnio varžybų protokolas</h1>
+        <h1>Krepšinio varžybų protokolas</h1>
 
 
-        <div class="prazangos">
-            <div class="komanda1">
+        <div class="controls">
+            <div class="team1">
                 <div>
                     <h2>Komanda 1</h2>
-                    <div id="k1-points">Taškai: 54</div>
+                    <div id="team1-points">Taškai: 0</div>
                 </div>
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 1">
-                    <span>Pražangos</span> <span data-prazangos-k1z1>1</span> <button data-btn-k1z1>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t1-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 2">
-                    <span>Pražangos</span> <span data-prazangos-k1z2>1</span> <button data-btn-k1z2>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t1-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 3">
-                    <span>Pražangos</span> <span data-prazangos-k1z3>1</span> <button data-btn-k1z3>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t1-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="tasku-btn">
-                    <button class="k1-taskai">+1</button>
-                    <button class="k1-taskai">+2</button>
-                    <button class="k1-taskai">+3</button>
+                <div class="points-btns">
+                    <button class="t1-points-btn" value='1'>+1</button>
+                    <button class="t1-points-btn" value='2'>+2</button>
+                    <button class="t1-points-btn" value='3'>+3</button>
                 </div>
             </div>
 
 
-            <div class="komanda1">
+            <div class="team2">
                 <div>
                     <h2>Komanda 2</h2>
-                    <div id="k2-points">Taškai: 24</div>
+                    <div id="team2-points">Taškai: 0</div>
                 </div>
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 1">
-                    <span>Pražangos</span> <span data-prazangos-k2z1>1</span> <button data-btn-k2z1>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t2-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 2">
-                    <span>Pražangos</span> <span data-prazangos-k2z2>1</span> <button data-btn-k2z2>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t2-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="prazangos-eilute">
+                <div class="fouls-line">
                     <input type="text" placeholder="Žaidėjas 3">
-                    <span>Pražangos</span> <span data-prazangos-k2z3>1</span> <button data-btn-k2z3>+Pražanga</button>
+                    <span>Pražangos</span> <span class="foul-number">1</span> <button
+                        class="t2-foul-btn">+Pražanga</button>
                 </div>
 
-                <div class="tasku-btn">
-                    <button class="k2-taskai">+1</button>
-                    <button class="k2-taskai">+2</button>
-                    <button class="k2-taskai">+3</button>
+                <div class="points-btns">
+                    <button class="t2-points-btn" value='1'>+1</button>
+                    <button class="t2-points-btn" value='2'>+2</button>
+                    <button class="t2-points-btn" value='3'>+3</button>
                 </div>
             </div>
 
@@ -74,10 +80,10 @@
 
 
         <h3>Įašai</h3>
-        <div class="irasai">
+        <div class="log">
             <div>Žaidėjas gavo pražangą</div>
         </div>
-        <div><button class="baigti-btn">Baigti varžybas</button>
+        <div><button class="finish-btn">Baigti varžybas</button>
             <button>Pradėti iš naujo</button>
         </div>
     </div>

@@ -21,30 +21,37 @@ button {
     flex-direction: column;
 }
 
-.prazangos {
+.controls {
     display: flex;
     justify-content: center;
     column-gap: 50px;
 
 }
 
-.komanda1 {
+.team1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.tasku-btn {
+.team2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.points-btns {
     display: flex;
     justify-content: center;
     column-gap: 10px;
 }
 
-.irasai {
+.log {
     background-color: white;
     border: 1px solid lightblue;
-    width: 20%;
+    width: 500px;
     margin: auto;
     margin-bottom: 50px;
 

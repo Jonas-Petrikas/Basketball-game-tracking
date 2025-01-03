@@ -1,65 +1,59 @@
-console.log('hello from JS file');
+let team1Points = 0;
+let team2Points = 0;
 
-let k1Points;
-let k2Ponts;
-let kelinys;
+let gameLog = [];
+const fouls = [];
 
-let prazangos = {};
+let quarter = 1;
 
-const init = _ => {
-    k1Points = 0;
-    k2Ponts = 0;
-    kelinys = 1;
+//nusiskaitome taškų mygtukus
+const t1pointsButtons = document.querySelectorAll('.t1-points-btn');
+const t2pointsButtons = document.querySelectorAll('.t2-points-btn');
 
-    prazangos = {
-        komanda1: {
-            z1: 0,
-            z2: 0,
-            z3: 0
-        },
-        komanda2: {
-            z1: 0,
-            z2: 0,
-            z3: 0
-        }
-    }
+//nusiskaitom pražangų mygtukus
+const t1foulButtons = document.querySelectorAll('.t1-foul-btn');
+const t2foulButtons = document.querySelectorAll('.t2-foul-btn');
+
+//nusiskaitome id
+let team1PointsCounter = document.querySelector('#team1-points');
+let team2PointsCounter = document.querySelector('#team2-points');
+
+let team1FoulCounter = document.querySelectorAll('.team2 .foul-number')
+console.log(team1FoulCounter);
+
+let log = document.querySelector('.log');
+
+t1pointsButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        team1Points += parseInt(button.innerText);
+        team1PointsCounter.innerText = 'Taškai: ' + team1Points;
+        gameLog.unshift(`Komanda 1 pelnė ${parseInt(button.innerText)} tšk., viso taškų: ${team1Points}, (${new Date().toLocaleTimeString()})`)
+        console.log(gameLog);
+        logRender();
+    })
+});
+
+t2pointsButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        team2Points += parseInt(button.innerText);
+        team2PointsCounter.innerText = 'Taškai: ' + team2Points;
+        gameLog.unshift(`Komanda 2 pelnė ${parseInt(button.innerText)} tšk., viso taškų: ${team2Points}, (${new Date().toLocaleTimeString()})`)
+        console.log(gameLog);
+        logRender();
+    })
+});
+
+const logRender = _ => {
+    let html = '';
+
+    gameLog.forEach(el => {
+        html += `${el} <br>`
+    })
+    log.innerHTML = html;
+
 }
 
-init();
+console.log(team1Points);
 
-let prazangosk1z1 = document.querySelector('[data-prazangos-k1z1]').innerText = prazangos.komanda1.z1
-let prazangosk1z2 = document.querySelector('[data-prazangos-k1z2]').innerText = prazangos.komanda1.z2
-let prazangosk1z3 = document.querySelector('[data-prazangos-k1z3]').innerText = prazangos.komanda1.z3
-
-let prazangosk2z1 = document.querySelector('[data-prazangos-k2z1]').innerText = prazangos.komanda2.z1
-let prazangosk2z2 = document.querySelector('[data-prazangos-k2z2]').innerText = prazangos.komanda2.z2
-let prazangosk2z3 = document.querySelector('[data-prazangos-k2z3]').innerText = prazangos.komanda2.z3
-
-const renderPrazangos = _ => {
-    prazangosk1z1.innerText = prazangos.komanda1.z1
-
-};
-
-
-const btnPrazangak1z1 = document.querySelector('[data-btn-k1z1]')
-const btnPrazangak1z2 = document.querySelector('[data-btn-k1z2]')
-const btnPrazangak1z3 = document.querySelector('[data-btn-k1z3]')
-
-const btnPrazangak2z1 = document.querySelector('[data-btn-k2z1]')
-const btnPrazangak2z2 = document.querySelector('[data-btn-k2z2]')
-const btnPrazangak2z3 = document.querySelector('[data-btn-k2z3]')
-
-btnPrazangak1z1.addEventListener('click', () => {
-    if (prazangosk1z1 < 5) {
-        prazangosk1z1++;
-        document.querySelector('[data-prazangos-k1z1]').innerText = prazangosk1z1;
-    } else {
-        btnPrazangak1z1.disabled = true;
-        btnPrazangak1z1.style.backgroundColor = 'red';
-        btnPrazangak1z1.style.cursor = 'not-allowed';
-    }
-})
-
-console.log(prazangos.komanda1.z1);
 
 
